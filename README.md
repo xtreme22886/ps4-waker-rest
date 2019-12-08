@@ -8,7 +8,7 @@ To run this image:
 `docker run -d --restart always --name ps4waker -v "/path/to/your/config/folder:/waker/data" --net=host xtreme22886/ps4-waker-rest`
 
 To generate the file `ps4-config.json` run the following commends:
-1. `docker exec -it container-name /bin/sh`
+1. `docker exec -it ps4waker /bin/sh`
 2. `npm install -g ps4-waker`
 3. `rm /waker/data/ps4-creds.json`
 4. `ps4-waker -c /waker/data/ps4-creds.json`
