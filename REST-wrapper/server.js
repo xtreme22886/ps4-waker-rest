@@ -25,6 +25,15 @@ const get_options = function (ip) {
     }
 };
 
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
+
 router.route("/:device_ip/info")
     .get(function (req, res) {
         let ps4 = new Device(get_options(req.params.device_ip));
@@ -73,8 +82,10 @@ router.route("/:device_ip/start/:title")
             ps4.close();
         }).catch(
             function (err) {
-                res.status(HTTP_400);
-                res.json({status: err.message})
+                ps4.sendKeys(["enter"]).then(function () {
+                    res.json(OK);
+                    ps4.close();
+            	})
             }
         );
     });
@@ -92,7 +103,6 @@ router.route("/:device_ip/key/:key")
             }
         );
     });
-
 
 app.use("/ps4", router);
 const port = argv.port || 3000;
