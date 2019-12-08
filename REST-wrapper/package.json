@@ -1,11 +1,12 @@
 {
-  "name": "ps4-hassio-waker",
+  "name": "ps4 waker",
   "version": "0.0.1",
   "description": "REST wrapper to talk to ps4-waker",
   "main": "server.js",
   "author": "Vlad Korniev",
   "contributors": [
-    "Juergen Stauber"
+    "Juergen Stauber",
+    "xtreme"
   ],
   "bin": {
     "ps4-waker-rest": "server.js"
