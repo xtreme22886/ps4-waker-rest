@@ -1,5 +1,5 @@
 {
-  "name": "ps4 waker",
+  "name": "ps4-st-waker",
   "version": "0.0.1",
   "description": "REST wrapper to talk to ps4-waker",
   "main": "server.js",
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "express": "^4.15.3",
-    "ps4-waker": "^1.9.0",
+    "ps4-waker": "^1.8.6",
    "minimist": "^1.2.0"
   }
 }
