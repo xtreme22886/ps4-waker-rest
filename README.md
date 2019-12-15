@@ -4,8 +4,13 @@ This is simple REST-wrapper around [ps4-waker](https://github.com/dhleong/ps4-wa
 
 **Warning**: no authentication is performed. Don't expose this service to outside network.
 
-To run this image:
+For amd32/64
+Run this image:
 `docker run -d --restart always --name ps4waker -v "/path/to/your/config/folder:/waker/data" --net=host xtreme22886/ps4-waker-rest`
+
+For arm32
+Run this image:
+`docker run -d --restart always --name ps4waker -v "/path/to/your/config/folder:/waker/data" --net=host xtreme22886/ps4-waker-rest-arm`
 
 To generate the file `ps4-config.json` run the following commends:
 1. `docker exec -it ps4waker /bin/sh`
