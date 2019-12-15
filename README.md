@@ -9,7 +9,7 @@ For amd32/64
 Run this image:
 `docker run -d --restart always --name ps4waker -v "/path/to/your/config/folder:/waker/data" --net=host xtreme22886/ps4-waker-rest`
 
-For arm32
+For arm32 (Raspberry Pi)
 
 Run this image:
 `docker run -d --restart always --name ps4waker -v "/path/to/your/config/folder:/waker/data" --net=host xtreme22886/ps4-waker-rest-arm`
